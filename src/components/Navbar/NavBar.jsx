@@ -37,6 +37,7 @@ function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [activeDesktopItem, setActiveDesktopItem] = React.useState(null);
   const [activeMobileItem, setActiveMobileItem] = React.useState(null);
+  const [activeItem, setActiveItem] = React.useState("Home");
   const chevronItems = ["Menu", "About"]; // Items to show ChevronDown
 
   const toggleMenu = () => {
@@ -45,10 +46,12 @@ function NavBar() {
 
   const handleDesktopItemClick = (itemName) => {
     setActiveDesktopItem(activeDesktopItem === itemName ? null : itemName);
+    setActiveItem(itemName);
   };
 
   const handleMobileItemClick = (itemName) => {
     setActiveMobileItem(activeMobileItem === itemName ? null : itemName);
+    setActiveItem(itemName);
   };
 
   return (
@@ -66,7 +69,7 @@ function NavBar() {
               />
             </div>
             <div className="hidden grow pl-12 items-start lg:flex">
-              <ul className="ml-32  inline-flex items-center space-x-16">
+              <ul className="ml-32 inline-flex items-center space-x-16">
                 {/* menu map start here */}
                 {menuItems.map((item) => (
                   <li
@@ -76,16 +79,20 @@ function NavBar() {
                   >
                     <a
                       href={item.href}
-                      className="inline-flex items-center text-md font-normal font-sans-serif text-gray-800  hover:text-gray-900"
+                      className={`inline-flex items-center text-md font-normal font-sans-serif hover:text-[#f38221] ${
+                        activeItem === item.name
+                          ? "text-[#f38221]"
+                          : "text-gray-800"
+                      }`}
                     >
                       {item.name}
                       {/* showing and hiding arrow for menu and about */}
                       {chevronItems.includes(item.name) && (
                         <span>
                           {activeDesktopItem === item.name ? (
-                            <ChevronUp className="ml-2 h-4 w-4" />
+                            <ChevronUp className="ml-2 h-6 w-6 text-[#f38221]" />
                           ) : (
-                            <ChevronDown className="ml-2 h-4 w-4" />
+                            <ChevronDown className="ml-2 h-6 w-6" />
                           )}
                         </span>
                       )}
@@ -98,7 +105,7 @@ function NavBar() {
                           <li key={subItem.name}>
                             <a
                               href={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#f38221]"
                             >
                               {subItem.name}
                             </a>
@@ -151,10 +158,14 @@ function NavBar() {
                           <div key={item.name}>
                             <a
                               href={item.href}
-                              className="-m-3 flex items-center justify-between rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                              className={`-m-3 flex items-center justify-between rounded-md p-3 text-sm font-semibold hover:bg-gray-50 ${
+                                activeItem === item.name
+                                  ? "text-[#f38221]"
+                                  : "text-gray-900"
+                              }`}
                               onClick={() => handleMobileItemClick(item.name)}
                             >
-                              <span className="ml-3 text-base font-medium text-gray-900">
+                              <span className="ml-3 text-base font-medium">
                                 {item.name}
                               </span>
                               {chevronItems.includes(item.name) && (
@@ -189,7 +200,7 @@ function NavBar() {
                     <div className="mt-2 space-y-2">
                       <button
                         type="button"
-                        className="w-full rounded-md bg-[#f38221] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#E9252F]focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E9252F]"
+                        className="w-full rounded-md bg-[#f38221] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#E9252F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E9252F]"
                       >
                         Login/Register
                       </button>
