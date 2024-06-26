@@ -5,7 +5,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Plus Jakarta Sans", "sans-serif"],
-        cursive: ["Dancing Script", "cursive"],
       },
     },
   },
