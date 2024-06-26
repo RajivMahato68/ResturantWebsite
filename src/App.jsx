@@ -1,9 +1,12 @@
-import { NavBar } from "./components";
+import { NavBar, Footer } from "./components";
+
 
 function App() {
   return (
     <>
       <NavBar />
+      <Footer />
+      
     </>
   );
 }
