@@ -6,7 +6,7 @@ import momoStreet from "../../assets/logo.png";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10 ">
+    <footer className="bg-gray-900 text-gray-300 py-10 overflow-x-hidden">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="w-full md:w-1/4 xl:w-1/4 p-6 flex flex-col items-center">
@@ -99,22 +99,22 @@ function Footer() {
               <img
                 src="https://picsum.photos/200/150"
                 alt="Gallery Image"
-                className="rounded-md"
+                // className="rounded-md"
               />
               <img
                 src="https://picsum.photos/200/150"
                 alt="Gallery Image"
-                className="rounded-md"
+                // className="rounded-md"
               />
               <img
                 src="https://picsum.photos/200/150"
                 alt="Gallery Image"
-                className="rounded-md"
+                // className="rounded-md"
               />
               <img
                 src="https://picsum.photos/200/150"
                 alt="Gallery Image"
-                className="rounded-md"
+                // className="rounded-md"
               />
             </div>
           </div>
