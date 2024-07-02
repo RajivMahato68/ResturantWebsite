@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
 
             <div className="w-full lg:w-1/4 p-3 mt-4 gap-6">
-              <h3 className="text-2xl font-normal text-white underline-bold underline decoration-[#f38221] decoration-2 underline-offset-4 font-sans-serif mb-4">
+              <h3 className="text-2xl font-normal text-white underline-bold underline decoration-[#f38221] decoration-2 underline-offset-4 font-sans-serif mb-4 ml-7">
                 Stay up to date
               </h3>
               <form className="flex flex-col md:flex-row mb-2 text-white ">
