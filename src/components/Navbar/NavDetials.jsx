@@ -3,8 +3,8 @@ import { FaPhone, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 function NavDetials() {
   return (
-    <div className="w-full  h-8 bg-[#ffffff]">
-      <div className="md:px-32 px-4  flex justify-between items-center">
+    <div className="w-full  h-10 bg-[#fef3e9] shadow-md shadow-[#fef3e9] border border-[#fef3e9]">
+      <div className="md:px-32 px-4 py-1 flex justify-between items-center">
         <div className="text-[#f38221] md:pl-12 md:text-lg text-sm space-x-1 flex items-center ">
           <FaPhone className="text-[#E9252F]" />
           <h1 className="font-sans-serif">Phone:+978000032099</h1>
