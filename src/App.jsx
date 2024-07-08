@@ -1,15 +1,12 @@
-import { NavBar, Footer } from "./components";
+import { HomePage } from "./components";
 
-
-
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <div>
-        <NavBar />
-        <Footer />
+        <HomePage />
       </div>
     </Router>
   );
