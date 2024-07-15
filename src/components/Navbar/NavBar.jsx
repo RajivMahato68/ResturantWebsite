@@ -1,7 +1,8 @@
 import { NavDetials } from "../index";
 import Logo from "../../assets/logo.png";
-import React from "react";
+import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   {
@@ -27,10 +28,14 @@ const menuItems = [
 ];
 
 function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
+  const [activeItem, setActiveItem] = useState("Home"); // Default active item
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleItemClick = (itemName) => {
+    setActiveItem(itemName);
   };
 
   return (
@@ -38,18 +43,29 @@ function NavBar() {
       <NavDetials />
       <div className="mx-auto flex max-w-7xl h-16 items-center justify-between px-4 py-2  sm:px-6 lg:px-8 ">
         <div className="inline-flex items-center space-x-2 px-8 ml-12">
-          <img src={Logo} alt="logo" className="h-[5rem] w-[4rem] object-fit" />
+          <Link to="/">
+            <img
+              src={Logo}
+              alt="logo"
+              className="h-[5rem] w-[4rem] object-fit"
+            />
+          </Link>
         </div>
         <div className="hidden grow items-start lg:flex ml-12">
           <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="inline-flex items-center text-[13px] font-thin text-gray-800 mx-3  hover:text-[#F38220]"
+                <Link
+                  to={item.href}
+                  className={`inline-flex items-center text-[13px] font-thin  mx-3 hover:text-[#F38220] ${
+                    activeItem === item.name
+                      ? "font-semibold text-[#F38220]"
+                      : "text-gray-800"
+                  }`}
+                  onClick={() => handleItemClick(item.name)}
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -70,13 +86,14 @@ function NavBar() {
             </svg>
             Cart
           </button>
-
-          <button
-            type="button"
-            className="py-3 px-5 me-2 mb-2 text-sm font-medium text-gray-100 focus:outline-none bg-[#F38220] rounded-lg "
-          >
-            Login/Register
-          </button>
+          <Link to="/login">
+            <button
+              type="button"
+              className="py-3 px-5 me-2 mb-2 text-sm font-medium text-gray-100 focus:outline-none bg-[#F38220] rounded-lg "
+            >
+              Login/Register
+            </button>
+          </Link>
         </div>
         <div className="lg:hidden">
           <Menu
@@ -113,25 +130,28 @@ function NavBar() {
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                        onClick={() => handleItemClick(item.name)}
                       >
                         <span className="ml-3 text-base font-medium text-gray-900 font-sans-serif">
                           {item.name}
                         </span>
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
                 <div className="mt-2 space-y-2">
-                  <button
-                    type="button"
-                    className="w-full rounded-md bg-[#f38220] px-3 py-2 text-sm font-semibold font-sans-serif text-white shadow-sm hover:bg-[#381f09]"
-                  >
-                    Log In/Register
-                  </button>
+                  <Link to="/login">
+                    <button
+                      type="button"
+                      className="w-full rounded-md bg-[#f38220] px-3 py-2 text-sm font-semibold font-sans-serif text-white shadow-sm hover:bg-[#381f09]"
+                    >
+                      Log In/Register
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

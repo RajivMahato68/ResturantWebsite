@@ -1,4 +1,4 @@
-import { Contact, Home, Menu } from "./pages/pages";
+import { Contact, Home, Login, Menu, Register } from "./pages/pages";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -15,6 +15,14 @@ function App() {
     {
       path: "/our_menu",
       element: <Menu />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
     },
   ]);
   return <RouterProvider router={router} />;

@@ -5,4 +5,20 @@ import HomePage from "./Header/HomePage";
 import Layout from "./Layout/Layout";
 import ContactUs from "./ContactUs/ContactUs";
 import MenuPage from "./Menu/MenuPage";
-export { NavBar, NavDetials, Footer, HomePage, Layout, ContactUs, MenuPage };
+import SignUpPage from "./LogIn/SingUp/SignUpPage";
+import LoginPage from "./LogIn/SingUp/LoginPage";
+import Input from "./Input";
+import Button from "./Button";
+export {
+  NavBar,
+  NavDetials,
+  Footer,
+  HomePage,
+  Layout,
+  ContactUs,
+  MenuPage,
+  LoginPage,
+  SignUpPage,
+  Input,
+  Button,
+};
