@@ -1,28 +1,28 @@
 import { NavDetials } from "../index";
 import Logo from "../../assets/logo.png";
 import React from "react";
-import { Menu, X, ShoppingCart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const menuItems = [
   {
     name: "Home",
-    href: "#",
+    href: "/",
   },
   {
     name: "Menu",
-    href: "#",
+    href: "/our_menu",
   },
   {
     name: "About",
-    href: "#",
+    href: "/about_us",
   },
   {
     name: "Contact",
-    href: "#",
+    href: "/contact_us",
   },
   {
     name: "Blog",
-    href: "#",
+    href: "/blog_and_news",
   },
 ];
 
@@ -46,7 +46,7 @@ function NavBar() {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="inline-flex items-center text-[13px] font-thin text-gray-800 mx-3  hover:text-gray-900"
+                  className="inline-flex items-center text-[13px] font-thin text-gray-800 mx-3  hover:text-[#F38220]"
                 >
                   {item.name}
                 </a>
@@ -57,10 +57,10 @@ function NavBar() {
         <div className="hidden space-x-2 mr-32 lg:block">
           <button
             type="button"
-            class="text-[#F38220] font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center me-2  "
+            className="text-[#F38220] font-medium rounded-lg text-lg px-5 py-2.5 text-center inline-flex items-center me-2  "
           >
             <svg
-              class="w-3.5 h-3.5 me-2"
+              className="w-3.5 h-3.5 me-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -73,7 +73,7 @@ function NavBar() {
 
           <button
             type="button"
-            class="py-3 px-5 me-2 mb-2 text-sm font-medium text-gray-100 focus:outline-none bg-[#F38220] rounded-lg "
+            className="py-3 px-5 me-2 mb-2 text-sm font-medium text-gray-100 focus:outline-none bg-[#F38220] rounded-lg "
           >
             Login/Register
           </button>
@@ -118,11 +118,8 @@ function NavBar() {
                         href={item.href}
                         className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
                       >
-                        <span className="ml-3 text-base font-medium text-gray-900">
+                        <span className="ml-3 text-base font-medium text-gray-900 font-sans-serif">
                           {item.name}
-                        </span>
-                        <span>
-                          <ChevronRight className="ml-3 h-4 w-4" />
                         </span>
                       </a>
                     ))}
@@ -131,15 +128,9 @@ function NavBar() {
                 <div className="mt-2 space-y-2">
                   <button
                     type="button"
-                    className="w-full rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="w-full rounded-md bg-[#f38220] px-3 py-2 text-sm font-semibold font-sans-serif text-white shadow-sm hover:bg-[#381f09]"
                   >
-                    Sign In
-                  </button>
-                  <button
-                    type="button"
-                    className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                  >
-                    Log In
+                    Log In/Register
                   </button>
                 </div>
               </div>

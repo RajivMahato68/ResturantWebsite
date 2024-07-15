@@ -1,15 +1,23 @@
-import { HomePage } from "./components";
+import { Contact, Home, Menu } from "./pages/pages";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <HomePage />
-      </div>
-    </Router>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/contact_us",
+      element: <Contact />,
+    },
+    {
+      path: "/our_menu",
+      element: <Menu />,
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
