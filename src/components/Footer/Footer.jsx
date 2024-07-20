@@ -46,7 +46,7 @@ const Footer = () => {
               <img
                 src={Logo}
                 alt="logo"
-                className="h-[70px] w-[70px] mx-auto  lg:ml-[6rem] object-fit"
+                className="h-[70px] w-[70px] mx-auto  lg:ml-[6rem] object-cover"
               />
               <p className="mt-5 text-[12px] text-[#c7bfb7] ">
                 Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc

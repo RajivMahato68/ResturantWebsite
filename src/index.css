@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.slick-slide > div{
+    margin: 0 10px;
+    margin-bottom: 30px;
+}
+
+/* Custom slick dots */
+.slick-dots li button:before {
+    font-size: 20px; /* Adjust font size to increase width and height */
+    color: gray; /* Change dot color */
+    
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: orange; /* Change active dot color */
+  }
+  
