@@ -125,7 +125,7 @@ function LoginPage() {
                 </div>
               </div>
             </div>
-            <div className="h-full w-full">
+            <div className="h-auto w-full mb-12 ">
               <img
                 className="mx-auto md:h-[40rem] md:w-[35rem] h-full w-full rounded-md object-cover"
                 src="https://cdn.pixabay.com/photo/2020/09/21/14/07/meal-5590186_1280.jpg"
