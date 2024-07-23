@@ -17,18 +17,21 @@ const chefs = [
 
 function LatestNews() {
   return (
-    <div className="w-full py-10">
+    <div className="w-full py-10  ">
       <div className="flex justify-center pb-10 mb-10 font-['Plus_Jakarta_Sans'] underline-offset-8" style={{ textDecoration: 'underline #f38220 2px', textDecorationThickness: '2px', textDecorationOffset: '2px' }}>
         <h1 className='text-[36px] font-bold'>Our News</h1>
       </div>
       {chefs.map((chef, index) => (
-        <div key={index} className={`w-full flex flex-col md:flex-row items-center justify-center md:justify-between bg-gray-100 px-4 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+        <div 
+          key={index} 
+          className={`w-full px-10 flex flex-col md:flex-row items-center justify-center md:justify-between bg-gray-100 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} ${index === 1 ? 'pb-10' : ''}`} 
+        >
           <div className="md:w-1/2">
             <div className={`flex justify-center md:justify-end ${index === 1 ? 'md:mr-[200px]' : 'md:ml-[125px]'}`}>
               <img
                 src={chef.image}
                 alt={chef.title}
-                className="rounded-lg shadow-md w-[420px] h-[340px] md:w-[520px] md:h-[400px] object-cover mt-4 md:mt-10"
+                className="rounded-lg shadow-md w-[520px] h-[400px] md:w-[520px] md:h-[400px] object-cover mt-4 md:mt-10"
               />
             </div>
           </div>

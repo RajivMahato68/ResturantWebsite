@@ -10,6 +10,7 @@ import LatestNews from "./LatestNews";
 import Comment from "./Comment"
 import OurResturant from "./OurResturant";
 
+
 function HomePage() {
   return (
     <Layout>

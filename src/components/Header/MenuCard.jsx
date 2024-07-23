@@ -1,48 +1,19 @@
 import React from 'react';
-import image1 from '../../assets/card1.jpg';
-import image2 from '../../assets/menuCard.jfif';
-import image3 from '../../assets/menuCard2.jfif';
-import image4 from '../../assets/menuCard3.jfif';
 import { FaCartArrowDown } from "react-icons/fa";
 import { CiSquarePlus } from "react-icons/ci";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const menuItems = [
-  {
-    image: image1,
-    name: 'MO:MO',
-    description: 'Steamed or fried dumplings filled with minced meat or vegetables, served with spicy chutney.',
-    deliveryFee: '500'
-  },
-  {
-    image: image2,
-    name: 'Chicken Sekuwa',
-    description: 'Marinated and grilled chicken skewers, summer and winter seasoned with Nepali spices.',
-    deliveryFee: '500'
-  },
-  {
-    image: image3,
-    name: 'Aloo Chop',
-    description: 'Spiced mashed potato patties, coated in chickpea flour and fried until crispy',
-    deliveryFee: '500'
-  },
-  {
-    image: image4,
-    name: 'Chhoila',
-    description: 'Spicy grilled meat mixed with mustard oil, spices, and herbs served with spices.',
-    deliveryFee: '500'
-  }
-];
-
-function MenuCard() {
+function MenuCard({ menuItems }) {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -71,7 +42,7 @@ function MenuCard() {
           <div
             key={index}
             className="relative bg-white rounded-lg shadow-md overflow-hidden group mx-2"
-            style={{ width: '100%', maxWidth: '300px', height: '100%', maxHeight: '500px' }}
+            style={{ width: '242px', height: '433px' }}
           >
             <img src={menuItem.image} alt={menuItem.name} className="w-full h-[200px] object-cover" />
             <div className="p-4 h-[calc(100%-200px)]">
@@ -82,14 +53,13 @@ function MenuCard() {
                   <span className='text-black font-["Plus_Jakarta_Sans"]'>Delivery fee: <span className='text-orange-500'>Rs.</span></span>
                   {menuItem.deliveryFee}
                 </p>
-                <button className="bg-black group-hover:bg-orange-500 text-white font-bold py-2 px-4 rounded transition-colors duration-300 flex items-center">
-                  <FaCartArrowDown />
-                </button>
+                <div className="flex items-center">
+                  <CiSquarePlus className="text-orange-500 w-11 h-11 opacity-0 group-hover:opacity-100 transition-opacity duration-300 " />
+                  <button className="bg-black group-hover:bg-orange-500 text-white font-bold py-2 px-4 rounded transition-colors duration-300 flex items-center">
+                    <FaCartArrowDown className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
-            </div>
-            {/* Plus Icon Container */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:mt-[300px] md:ml-[170px] mt-[322px] ml-[95px]">
-              <CiSquarePlus className="text-orange-500 text-5xl" />
             </div>
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 text-left mt-2 ml-1 duration-300">
               <span className="bg-orange-500 text-white px-2 py-1 font-['Plus_Jakarta_Sans'] text-[14px]">

@@ -12,12 +12,12 @@ function FirstSection() {
         backgroundPosition: 'center',
       }}
     >
-      <h1 className='text-center text-white text-[20px] md:text-[51px] pr-[35px] font-["Plus_Jakarta_Sans"] pt-[100px]'>
+      <h1 className='text-center text-white text-[16px] md:text-[51px]  pr-[35px] font-["Plus_Jakarta_Sans"] pt-[100px]'>
         Delicious food, warm and cozy ambiance.
       </h1>
       <div className='font-["Plus_Jakarta_Sans"] text-white text-[18px] text-lg mt-5'>
-        <p className='text-center'>Experience culinary artistry where flavors meet elegance. Welcome to a dining adventure that tantalizes your taste buds and</p>
-        <p className='md:pl-[155px] pl-[100px]'>warms your heart.</p>
+        <p className='md:px-[150px] px-5'>Experience culinary artistry where flavors meet elegance. Welcome to a dining adventure that tantalizes your taste buds and warms your heart.</p>
+        {/* <p className='md:pl-[155px] pl-[40px]'></p> */}
       </div>
       <div className='md:pl-[150px] pl-[30px] '>
       <button className=' bg-[#f38220] w-[118px] h-[44px] text-[16px] text-white font-["Plus_Jakarta_Sans"]text-center rounded mt-20 hover:bg-[#b9763a] md:justify-center mb-5'>Reservation</button>
