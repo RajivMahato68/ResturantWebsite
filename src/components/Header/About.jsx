@@ -17,7 +17,7 @@ const imageData = [image1, image2, image3];
 
 function About() {
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-5">
       {aboutData.map((item, index) => (
         <div key={item.id} className='md:flex md:flex-row flex flex-col md:pr-0 pr-[50px] md:justify-center md:mt-[100px] justify-center gap-4 overflow-hidden'>
           <div className="relative md:w-[450px] md:h-[300px] w-[200px] h-[150px] rounded-md mt-10 md:ml-[150px] ml-[120px] flex justify-center items-center shadow-rose-600">
