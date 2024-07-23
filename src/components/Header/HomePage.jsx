@@ -3,7 +3,7 @@ import { Layout } from "../index";
 import FirstSection from "./FirstSection";
 import Card from "./Card";
 import Menu from "./Menu";
-import BookingForm from "./BookTime";
+
 import About from "./About";
 import ChefAbout from "./ChefAbout";
 import LatestNews from "./LatestNews";
@@ -24,7 +24,7 @@ function HomePage() {
       <Menu />
       </div>
       
-      <BookingForm />
+     
       <About />
       <ChefAbout />
       <LatestNews />
