@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Contact, Home, Login, Menu, Register} from "./pages/pages";
+import { About, Contact, Home, Login, Menu, Register } from "./pages/pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
@@ -9,11 +9,11 @@ function App() {
       element: <Home />,
     },
     {
-      path: "/contact_us",
+      path: "/contact-us",
       element: <Contact />,
     },
     {
-      path: "/our_menu",
+      path: "/our-menu",
       element: <Menu />,
     },
     {
@@ -25,10 +25,9 @@ function App() {
       element: <Register />,
     },
     {
-      path:"/about_us",
-      element:<About />
-    }
-    
+      path: "/about-us",
+      element: <About />,
+    },
   ]);
 
   return <RouterProvider router={router} />;

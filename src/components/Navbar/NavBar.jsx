@@ -11,19 +11,15 @@ const menuItems = [
   },
   {
     name: "Menu",
-    href: "/our_menu",
+    href: "/our-menu",
   },
   {
     name: "About",
-    href: "/about_us",
+    href: "/about-us",
   },
   {
     name: "Contact",
-    href: "/contact_us",
-  },
-  {
-    name: "Blog",
-    href: "/blog_and_news",
+    href: "/contact-us",
   },
 ];
 
@@ -34,7 +30,7 @@ function NavBar() {
 
   useEffect(() => {
     const currentPath = location.pathname;
-    const currentItem = menuItems.find(item => item.href === currentPath);
+    const currentItem = menuItems.find((item) => item.href === currentPath);
     if (currentItem) {
       setActiveItem(currentItem.name);
     }
