@@ -7,7 +7,7 @@ import { FiAlertCircle } from "react-icons/fi";
 const aboutData = [
   {
     id: 1,
-    text: `Chef [Name] is the heart and soul of [Restaurant Name]. With over [number] years of culinary experience, Chef [Name] combines traditional Nepali flavors with innovative techniques. Passionate about using the freshest ingredients, Chef [Name] creates dishes that are both authentic and unforgettable. Join us to experience the culinary artistry of Chef [Name].`,
+    text: `Welcome to [Restaurant Name], where we bring the authentic flavors of Nepal to [City]. Enjoy our delicious, traditional dishes crafted with fresh ingredients and love.`,
     heading: "About Us",
   },
   // Add more objects as needed
@@ -39,23 +39,14 @@ function About() {
 
           <div className='w-[430px] h-[448px] flex flex-col justify-center'>
             <h1
-              className='text-[36px] font-bold mb-10 md:mt-[-100px] md:ml-0 ml-[80px] mt-5 md:mr-0 mr-[90px] font-["Plus_Jakarta_Sans"] underline-offset-8'
+              className='text-[36px] font-bold mb-5 md:mt-[-100px] md:ml-0 ml-[80px] mt-5 md:mr-0 mr-[90px] font-["Plus_Jakarta_Sans"] underline-offset-8'
               style={{ textDecoration: 'underline #f38220 2px', textDecorationThickness: '2px', textDecorationOffset: '4px' }}
             >
               {item.heading}
             </h1>
 
-            <p className='text-base md:text-lg leading-relaxed md:leading-normal font-["Plus_Jakarta_Sans"] ml-2'>
-              Welcome to [Restaurant Name], where
-              <span className='block md:hidden'>we bring the authentic flavors of Nepal </span>
-              <span className='block md:hidden'>to [City].</span>
-              <span className='block md:hidden'> {/* This span will be shown only on mobile */}
-                Enjoy our delicious, traditional dishes
-              </span>
-              <span className='block md:hidden'>crafted with fresh ingredients and love.</span>
-              <span className='hidden md:block'> {/* This span will be shown only on desktop */}
-                we bring the authentic flavors of Nepal to [City]. Enjoy our delicious, traditional dishes crafted with fresh ingredients and love.
-              </span>
+            <p className='text-base md:text-[14px] leading-relaxed md:leading-normal font-["Plus_Jakarta_Sans"] ml-2'>
+              {item.text}
             </p>
 
             <div className='flex border w-[160px] h-[48px] text-center bg-[#F38220] rounded-lg mt-5 hover:bg-[#e69443] justify-center md:ml-0 ml-20'>

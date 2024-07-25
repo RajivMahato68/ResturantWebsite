@@ -9,6 +9,9 @@ import SignUpPage from "./LogIn/SingUp/SignUpPage";
 import LoginPage from "./LogIn/SingUp/LoginPage";
 import Input from "./Input";
 import Button from "./Button";
+import AboutPage from "./AboutUs/AboutPage";
+
+
 export {
   NavBar,
   NavDetials,
@@ -21,4 +24,6 @@ export {
   SignUpPage,
   Input,
   Button,
+  AboutPage,
+
 };
