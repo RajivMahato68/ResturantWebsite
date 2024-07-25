@@ -22,10 +22,10 @@ function FirstSection() {
         {/* <p className='md:pl-[155px] pl-[40px]'></p> */}
       </div>
 
-      <div className='md:pl-[120px] pl-[30px] pt-20'>
-     
-      <button className='w-[127px] h-[44px] bg-white rounded text-[#f38220] md:ml-7 justify-center ml-[5px]'>Order Online</button>
-      </div>
+      <div className="md:pl-[120px] pl-[30px] pt-20">
+        <button className="w-[127px] h-[44px] bg-white rounded text-[#f38220] md:ml-7 justify-center ml-[5px]">
+          Order Online
+        </button>
       </div>
     </div>
   );
