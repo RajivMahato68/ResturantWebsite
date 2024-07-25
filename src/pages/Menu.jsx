@@ -5,8 +5,6 @@ import Loader from "./Loader";
 function Menu() {
   return (
     <>
-      <Loader />
-
       <MenuPage />
     </>
   );
