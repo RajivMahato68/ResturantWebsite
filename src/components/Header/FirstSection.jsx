@@ -19,8 +19,8 @@ function FirstSection() {
         <p className='md:px-[150px] px-5'>Experience culinary artistry where flavors meet elegance. Welcome to a dining adventure that tantalizes your taste buds and warms your heart.</p>
         {/* <p className='md:pl-[155px] pl-[40px]'></p> */}
       </div>
-      <div className='md:pl-[150px] pl-[30px] '>
-      <button className=' bg-[#f38220] w-[118px] h-[44px] text-[16px] text-white font-["Plus_Jakarta_Sans"]text-center rounded mt-20 hover:bg-[#b9763a] md:justify-center mb-5'>Reservation</button>
+      <div className='md:pl-[120px] pl-[30px] pt-20'>
+     
       <button className='w-[127px] h-[44px] bg-white rounded text-[#f38220] md:ml-7 justify-center ml-[5px]'>Order Online</button>
       </div>
       </div>
