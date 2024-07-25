@@ -24,11 +24,11 @@ function Gallery() {
       >
         Our Gallery
       </h1>
-      <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center ">
+      <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center">
         {images.map((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0"
+            className="flex-shrink-0 image-container"
             style={{ width: image.width, height: image.height }}
           >
             <img
@@ -39,6 +39,15 @@ function Gallery() {
           </div>
         ))}
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .image-container {
+            width: 100% !important;
+            height: 250px !important;
+            margin-bottom: 16px;
+          }
+        }
+      `}</style>
     </div>
   );
 }
