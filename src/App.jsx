@@ -1,5 +1,5 @@
-import { Contact, Home, Login, Menu, Register } from "./pages/pages";
-
+import React from "react";
+import { About, Contact, Home, Login, Menu, Register} from "./pages/pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
@@ -24,7 +24,13 @@ function App() {
       path: "/register",
       element: <Register />,
     },
+    {
+      path:"/about_us",
+      element:<About />
+    }
+    
   ]);
+
   return <RouterProvider router={router} />;
 }
 

@@ -1,8 +1,8 @@
 import { NavDetials } from "../index";
 import Logo from "../../assets/logo.png";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const menuItems = [
   {
@@ -28,8 +28,18 @@ const menuItems = [
 ];
 
 function NavBar() {
-  const [activeItem, setActiveItem] = useState("Home"); // Default active item
+  const location = useLocation();
+  const [activeItem, setActiveItem] = useState("Home"); //default active items
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const currentItem = menuItems.find(item => item.href === currentPath);
+    if (currentItem) {
+      setActiveItem(currentItem.name);
+    }
+  }, [location]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -134,7 +144,10 @@ function NavBar() {
                         key={item.name}
                         to={item.href}
                         className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
-                        onClick={() => handleItemClick(item.name)}
+                        onClick={() => {
+                          handleItemClick(item.name);
+                          toggleMenu(); // Close the menu after clicking
+                        }}
                       >
                         <span className="ml-3 text-base font-medium text-gray-900 font-sans-serif">
                           {item.name}
