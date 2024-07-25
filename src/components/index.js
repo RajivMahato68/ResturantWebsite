@@ -10,7 +10,7 @@ import LoginPage from "./LogIn/SingUp/LoginPage";
 import Input from "./Input";
 import Button from "./Button";
 import AboutPage from "./AboutUs/AboutPage";
-
+import Spiner from "./Spiner";
 
 export {
   NavBar,
@@ -25,5 +25,5 @@ export {
   Input,
   Button,
   AboutPage,
-
+  Spiner,
 };
