@@ -10,11 +10,10 @@ import Love from "./Love";
 const Footer = () => {
   const quickLinks = [
     { label: "Home", href: "/" },
-    { label: "Menu", href: "/our_menu" },
-    { label: "Contact Us", href: "/contact_us" },
-    { label: "About", href: "/about_us" },
-    { label: "Blog", href: "/blog_and_news" },
-    { label: "Order Online", href: "/online_orders" },
+    { label: "Menu", href: "/our-menu" },
+    { label: "Contact Us", href: "/contact-us" },
+    { label: "About", href: "/about-us" },
+    { label: "Order Online", href: "/online-orders" },
   ];
 
   const schedule = [
