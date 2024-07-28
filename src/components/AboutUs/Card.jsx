@@ -1,6 +1,4 @@
 import React from 'react';
-import { FaCartArrowDown } from "react-icons/fa";
-import { CiSquarePlus } from "react-icons/ci";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,7 +42,7 @@ function Card({ menuItems }) {
             className="relative border  rounded-lg shadow-lg shadow-gray-300  overflow-hidden mx-2"
             style={{ width: '250px', height: '300px' }}
           >
-            <img src={menuItem.image} alt={menuItem.name} className="w-[250px] h-[300px] object-cover" />
+            <img src={menuItem.image} alt={menuItem.name} className="md:w-[250px] md:h-[300px] h-[300px] w-full object-cover" />
             <div className="p-4 h-[calc(100%-200px)] bg-[#fef3e9]">
               <h2 className="text-xl font-bold mt-2 text-[20px]">{menuItem.name}</h2>
               <p className="text-gray-600 mt-2 text-[13px]">{menuItem.post}</p>

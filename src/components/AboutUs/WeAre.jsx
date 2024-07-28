@@ -22,24 +22,24 @@ function WeAre() {
           {/* Text and Button Section */}
           <div className='w-full md:w-[430px] h-auto md:h-[448px] flex flex-col justify-center'>
             <h1
-              className='text-[24px] md:text-[36px] font-bold mb-5 md:mb-10 ml-4 md:ml-0 font-["Plus_Jakarta_Sans"] underline-offset-8'
+              className='text-[24px] md:text-[36px] font-bold mb-5 md:mb-10 ml-4 md:ml-0 md:text-left text-center font-["Plus_Jakarta_Sans"] underline-offset-8'
               style={{ textDecoration: 'underline #f38220 2px', textDecorationThickness: '2px', textDecorationOffset: '4px' }}
             >
               {item.heading}
             </h1>
 
-            <p className='text-base md:text-[14px] text-[12px] leading-relaxed md:leading-normal font-["Plus_Jakarta_Sans"] ml-4 md:ml-0'>
+            <p className='text-base md:text-[14px] text-[20px] leading-relaxed md:leading-normal font-["Plus_Jakarta_Sans"] ml-4 md:ml-0 '>
               {item.text}
             </p>
 
-            <div className='flex border w-full md:w-[160px] h-[48px] text-center bg-[#F38220] rounded-lg mt-5 hover:bg-[#e69443] justify-center'>
+            <div className='flex border w-full md:w-[160px] h-[48px] md:ml-0 ml-7 text-center bg-[#F38220] rounded-lg mt-5 hover:bg-[#e69443] justify-center'>
               <button className='text-center ml-5 text-white'>Read More</button>
               <FiAlertCircle className='mt-3 w-[24px] h-[24px] ml-2 text-white' />
             </div>
           </div>
 
           {/* Image Section */}
-          <div className="relative md:w-[450px] md:h-[300px] w-[200px] h-[150px] rounded-md mt-10 md:ml-[150px] ml-[110px] flex justify-center items-center shadow-rose-600">
+          <div className="relative md:w-[450px] md:h-[300px] w-[200px] h-[150px] rounded-md mt-10 md:ml-[150px] ml-[130px] flex justify-center items-center shadow-rose-600 ">
             {/* Image 3: Background Image */}
             <div className="absolute z-10 md:w-[250px] w-[125px] md:h-[250px] h-[125px] md:ml-0 ml-[25px] rounded-md shadow-lg" style={{ left: 'calc(5% - 125px)', top: '5px' }}>
               <img src={image1} alt="Image 1" className="w-full h-full object-cover rounded-md" />

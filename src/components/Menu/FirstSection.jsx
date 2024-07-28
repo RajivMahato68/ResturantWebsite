@@ -20,7 +20,7 @@ function FirstSection() {
 </div>
 
     </div>
-    <p className=' text-[22px] text-[#333333] py-5 px-5 text-center md:px-[155px] md:mt-[110px] md:mb-[110px] font-["Plus_Jakarta_Sans"] font-semibold'>Savor the true flavors of Nepal with our authentic dishes, crafted from fresh, local ingredients. Enjoy a delightful culinary journey at [Restaurant Name]!</p>
+    <p className=' text-[22px] text-[#333333] py-5 px-5 md:text-center md:px-[155px] md:mt-[110px] md:mb-[110px] font-["Plus_Jakarta_Sans"] font-semibold text-left'>Savor the true flavors of Nepal with our authentic dishes, crafted from fresh, local ingredients. Enjoy a delightful culinary journey at [Restaurant Name]!</p>
     </div>
   )
 }

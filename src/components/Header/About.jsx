@@ -20,7 +20,7 @@ function About() {
     <div className="w-full py-5">
       {aboutData.map((item, index) => (
         <div key={item.id} className='md:flex md:flex-row flex flex-col md:pr-0 pr-[50px] md:justify-center md:mt-[100px] justify-center gap-4 overflow-hidden'>
-          <div className="relative md:w-[450px] md:h-[300px] w-[200px] h-[150px] rounded-md mt-10 md:ml-[150px] ml-[120px] flex justify-center items-center shadow-rose-600">
+          <div className="relative md:w-[450px] md:h-[300px] w-[200px] h-[150px] rounded-md mt-10 md:ml-[150px] ml-[145px] flex justify-center items-center shadow-rose-600">
             {/* Image 3: Background Image */}
             <div className="absolute z-10 md:w-[250px] w-[125px] md:h-[250px] h-[125px] md:ml-0 ml-[25px] rounded-md shadow-lg" style={{ left: 'calc(5% - 125px)', top: '5px' }}>
               <img src={image1} alt="Image 1" className="w-full h-full object-cover rounded-md" />
@@ -37,15 +37,15 @@ function About() {
             </div>
           </div>
 
-          <div className='w-[430px] h-[448px] flex flex-col justify-center'>
+          <div className='md:w-[430px] w-[350px]  h-[448px] flex flex-col justify-center'>
             <h1
-              className='text-[36px] font-bold mb-5 md:mt-[-100px] md:ml-0 ml-[80px] mt-5 md:mr-0 mr-[90px] font-["Plus_Jakarta_Sans"] underline-offset-8'
+              className='text-[36px] font-bold mb-5 md:mt-[-100px] md:ml-0 ml-[95px] mt-5 md:mr-0 mr-[90px] font-["Plus_Jakarta_Sans"] underline-offset-8'
               style={{ textDecoration: 'underline #f38220 2px', textDecorationThickness: '2px', textDecorationOffset: '4px' }}
             >
               {item.heading}
             </h1>
 
-            <p className='text-base md:text-[14px] leading-relaxed md:leading-normal font-["Plus_Jakarta_Sans"] ml-2'>
+            <p className='text-base md:text-[14px] md:px-0 px-5  leading-relaxed md:leading-normal font-["Plus_Jakarta_Sans"] ml-2'>
               {item.text}
             </p>
 

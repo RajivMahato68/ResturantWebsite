@@ -50,7 +50,7 @@ const Contact = () => {
   );
 
   return (
-    <div className="h-auto w-full max-w-md xl:w-[460px] md:h-[475px]  bg-white border border-[#dfdfdf] rounded-xl flex flex-col items-center mt-8 md:mt-0 md:ml-8 shadow-lg">
+    <div className="h-auto w-full max-w-md xl:w-[460px] md:h-[475px]  bg-white border border-[#dfdfdf] rounded-xl flex flex-col items-center mt-8 md:mt-0 md:ml-8 shadow-lg pb-5">
     <div className="w-[90%]">
       <form onSubmit={handleSubmit(onSubmit)} className="mt-8 flex flex-col">
         <div className="space-y-5 w-full">
@@ -86,7 +86,7 @@ const Contact = () => {
             rows={5}
             cols={40}
           />
-          <ButtonComponent type="submit" btnName="Send Message" />
+          <ButtonComponent type="submit" btnName="Send Message"/>
         </div>
       </form>
     </div>

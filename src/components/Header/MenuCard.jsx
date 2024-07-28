@@ -36,7 +36,7 @@ function MenuCard({ menuItems }) {
   };
 
   return (
-    <div className="container mx-auto py-6 px-4 md:px-8 lg:px-16 xl:px-24">
+    <div className="container mx-auto py-6 pr-4 md:px-8 lg:px-16 xl:px-24">
       <Slider {...settings}>
         {menuItems.map((menuItem, index) => (
           <div

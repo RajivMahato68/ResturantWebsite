@@ -94,7 +94,7 @@ function HappyHourCards() {
       </div>
       
       {/* Mobile view: show one random card centered */}
-      <div className="md:hidden  ml-[20px] justify-center h-[250px] w-[242px]">
+      <div className="md:hidden  ml-[45px] justify-center h-[250px] w-[242px]">
         {randomCard && <HappyHourCard {...randomCard} />}
       </div>
     </div>

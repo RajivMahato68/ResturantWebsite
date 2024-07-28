@@ -45,6 +45,8 @@ function Gallery() {
             width: 100% !important;
             height: 250px !important;
             margin-bottom: 16px;
+            padding-left:5px;
+            padding-right:5px;
           }
         }
       `}</style>

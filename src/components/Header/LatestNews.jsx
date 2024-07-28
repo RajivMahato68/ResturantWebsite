@@ -36,10 +36,10 @@ function LatestNews() {
             </div>
           </div>
           <div className={`md:w-1/2 text-center md:text-left mt-6 md:mt-0 ${index === 1 ? 'md:ml-[50px]' : ''}`}>
-            <h3 className='text-orange-500 text-[12px] font-semibold w-[77px] h-[22px] font-["Plus_Jakarta_Sans"] md:ml-[40px] ml-[100px]'>NEWS</h3>
+            <h3 className='text-orange-500 md:text-[12px] font-semibold w-[77px] h-[22px] font-["Plus_Jakarta_Sans"] md:ml-[40px] ml-[100px]'>NEWS</h3>
             <h2 className="text-3xl font-bold mb-4 md:ml-10">{chef.title}</h2>
             <div className="mx-4 md:mx-10">
-              <p className="text-gray-700 mb-4 md:mr-[80px]">
+              <p className="text-gray-700 mb-4 md:mr-[80px] text-left">
                 {chef.description}
               </p>
               <button className="bg-orange-500 hover:bg-orange-700 text-white py-2 rounded focus:outline-none focus:shadow-outline text-[16px] font-['Plus_Jakarta_Sans'] w-[120px] h-[44px]">

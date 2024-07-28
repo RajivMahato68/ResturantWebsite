@@ -23,10 +23,10 @@ function AboutChef() {
       {chefs.map((chef, index) => (
         <div key={index} className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center md:justify-between ">
           <div className="md:w-1/2 text-center md:text-left md:ml-[150px] mt-6 md:mt-0">
-            <h3 className='text-orange-500 text-[12px] font-semibold w-[77px] h-[22px] mb-3 font-["Plus_Jakarta_Sans"] md:ml-[40px] ml-[100px]'>ABOUT CHEF</h3>
+            <h3 className='text-orange-500 text-[12px] font-semibold w-[77px] h-[22px] mb-3 font-["Plus_Jakarta_Sans"] md:ml-[40px] ml-[70px]'>ABOUT CHEF</h3>
             <h2 className="text-3xl font-bold mb-4 ml-0 md:ml-10">{chef.title}</h2>
             <div className="mx-4 md:mx-10">
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 md:pl-0 pl-4 text-left">
                 {chef.description}
               </p>
               <button className="bg-orange-500 hover:bg-orange-700 text-white py-2 rounded focus:outline-none focus:shadow-outline text-[16px] font-['Plus_Jakarta_Sans'] w-[120px] h-[44px]">
