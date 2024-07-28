@@ -11,7 +11,7 @@ function FirstSection() {
         backgroundPosition: "center",
       }}
     >
-      <h1 className='text-center text-white text-[16px] md:text-[51px]  pr-[35px] font-["Plus_Jakarta_Sans"] pt-[100px]'>
+      <h1 className='text-center  text-white text-[20px] md:text-[51px]  pr-[35px]  font-["Plus_Jakarta_Sans"] pt-[100px]'>
         Delicious food, warm and cozy ambiance.
       </h1>
       <div className='font-["Plus_Jakarta_Sans"] text-white text-[18px] text-lg mt-5'>

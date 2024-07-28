@@ -98,7 +98,7 @@ function Menu() {
       <h1 className='text-3xl md:text-4xl lg:text-5xl font-["Plus_Jakarta_Sans"] font-semibold my-4'>
         Our Special Menu
       </h1>
-      <div className="flex justify-center flex-wrap md:gap-5">
+      <div className="flex justify-center flex-wrap md:gap-5 gap-2">
         {iconData.map((item, index) => (
           <div
             key={index}
