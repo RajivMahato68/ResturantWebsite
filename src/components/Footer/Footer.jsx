@@ -45,7 +45,7 @@ const Footer = () => {
               <img
                 src={Logo}
                 alt="logo"
-                className="h-[70px] w-[70px] mx-auto  lg:ml-[6rem] object-cover"
+                className="h-[70px] w-[70px] mx-auto   object-cover "
               />
               <p className="mt-5 text-[12px] text-[#c7bfb7] ">
                 Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -88,35 +88,36 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div className="lg:w-1/4">
-              <h5 className="mb-4 border-b-2 border-[#F38220] inline-block font-plus-jakarta-sans font-semibold text-[22px] text-center ml-[4rem] lg:ml-[3rem] ">
-                Stay up to date
-              </h5>
-              <div className="flex lg:flex-row items-center lg:items-start space-x-2">
-                <input
-                  className="w-[200px] lg:w-[187px] h-[46px] mb-5 border border-white text-black px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                  type="email"
-                  placeholder="Email address"
-                />
-                <button
-                  type="button"
-                  className="border border-[#F38220] w-full lg:w-[65px] h-[46px] bg-white px-3 py-2 text-sm font-semibold text-[#F38220] shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-[12px] flex items-center justify-center mb-5 "
-                >
-                  Submit
-                </button>
-              </div>
-              <ul className="text-[#c7bfb7] text-[12px] text-center">
-                {stayUpToDate.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex mb-3  text-center ml-[4rem] lg:ml-[0rem] lg:justify-start"
-                  >
-                    <span className="mr-2">{item.label}</span>
-                    <span>{item.value}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <div className="lg:w-1/4 px-4 lg:px-0">
+  <h5 className="mb-4 ml-[80px] md:ml-[280px] border-b-2 border-[#F38220] inline-block font-plus-jakarta-sans font-semibold text-[22px] text-center lg:text-left lg:ml-[20px] xl:ml-[60px]">
+    Stay up to date
+  </h5>
+  <div className="flex items-center justify-center lg:justify-start space-x-2 md:px-[300px] lg:px-0">
+    <input
+      className="w-[200px] lg:w-[187px] h-[46px] border border-white text-black px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+      type="email"
+      placeholder="Email address"
+    />
+    <button
+      type="button"
+      className="border border-[#F38220] w-full lg:w-[65px] h-[46px] bg-white px-3 py-2 text-sm font-semibold text-[#F38220] shadow-sm hover:bg-red-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-[12px] flex items-center justify-center"
+    >
+      Submit
+    </button>
+  </div>
+  <ul className="text-[#c7bfb7] text-[12px] text-center lg:text-left lg:ml-[3rem] mt-4">
+    {stayUpToDate.map((item, index) => (
+      <li
+        key={index}
+        className="flex items-center mb-3 justify-center lg:justify-start"
+      >
+        <span className="mr-2">{item.label}</span>
+        <span>{item.value}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+
           </div>
         </div>
       </footer>

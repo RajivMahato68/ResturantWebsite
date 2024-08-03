@@ -29,18 +29,24 @@ const reviews = [
 
 function Comment() {
   return (
-    <div className="container mx-auto mt-[50px] mb-[20px]">
-      <div className="flex justify-center mb-5 font-['Plus_Jakarta_Sans'] md:ml-[100px] ">
-        <h1 className=' font-bold text-center  md:text-[36px] text-[18px] mb-[20px]  underline-offset-8'
-         style={{ textDecoration: 'underline #f38220 2px', textDecorationThickness: '2px', textDecorationOffset: '4px' }}>
+    <div className="container mx-auto mt-[50px] mb-[20px] px-4">
+      <div className="flex justify-center mb-5 font-['Plus_Jakarta_Sans']">
+        <h1
+          className='font-bold text-center md:text-[36px] text-[18px] mb-[20px] underline-offset-8'
+          style={{
+            textDecoration: 'underline #f38220 2px',
+            textDecorationThickness: '2px',
+            textDecorationOffset: '4px'
+          }}
+        >
           What People Say About Us
         </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:pr-[150px] px-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-[20px] cursor-pointer">
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-300 rounded-md shadow-md p-4 w-full max-w-[312px] md:ml-[140px] pr-[50px] mx-auto mb-2"
+            className="bg-white border border-gray-300 rounded-md shadow-md p-4 w-full max-w-[312px] mx-auto"
             style={{ boxShadow: '0 4px 6px rgba(44, 44, 44, 0.5)' }}
           >
             <div className="flex items-center mb-2">

@@ -74,17 +74,17 @@ function Appetizers() {
       {/* Container for the card grid */}
       <div className="container mx-auto p-4 md:px-[100px]">
         {/* Grid layout for cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-[10px] md:grid-cols-2 lg:grid-cols-2 cursor-pointer">
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md flex flex-col md:flex-row w-full md:w-[510px] h-auto md:h-[160px] group hover:bg-[#fae7d7] transition duration-300 ease-in-out"
+              className="bg-white rounded-lg shadow-md flex flex-col lg:flex-row w-full h-auto md:gap-[30px] lg:w-[400px] lg:h-[200px] xl:w-[509px]  mx-auto group hover:bg-[#fae7d7] transition duration-300 ease-in-out"
             >
               {/* Image for the card */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full md:w-[160px] h-[160px] object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+                className="w-full h-[160px] object-cover rounded-t-lg lg:w-[160px] lg:h-[200px]  lg:rounded-l-lg lg:rounded-t-none"
               />
               {/* Content of the card */}
               <div className="flex flex-col justify-between w-full p-4">
