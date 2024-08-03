@@ -10,9 +10,9 @@ function NavDetials() {
           <h1 className="font-sans-serif">Phone:+978000032099</h1>
         </div>
         <div className="flex md:pr-24  items-center space-x-2 text-lg">
-          <FaFacebookF className="text-xl" />
-          <FaInstagram className="text-xl" />
-          <FaYoutube className="text-xl" />
+          <FaFacebookF className="text-xl text-[#c2681a]" />
+          <FaInstagram className="text-2xl text-[#c2681a]" />
+          <FaYoutube className="text-2xl text-[#c2681a]" />
         </div>
       </div>
     </div>
