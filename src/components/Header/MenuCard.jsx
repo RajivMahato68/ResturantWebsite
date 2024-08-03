@@ -36,16 +36,16 @@ function MenuCard({ menuItems }) {
   };
 
   return (
-    <div className="container mx-auto py-6 pr-4 md:px-8 lg:px-16 xl:px-24">
+    <div className="container mx-auto py-6 pr-4 md:px-8 lg:px-16 xl:px-24" >
       <Slider {...settings}>
         {menuItems.map((menuItem, index) => (
           <div
             key={index}
-            className="relative bg-white rounded-lg shadow-md overflow-hidden group mx-2"
+            className="relative bg-white rounded-lg shadow-md overflow-hidden group mx-2 cursor-pointer"
             style={{ width: '242px', height: '433px' }}
           >
             <img src={menuItem.image} alt={menuItem.name} className="w-full h-[200px] object-cover" />
-            <div className="p-4 h-[calc(100%-200px)]">
+            <div className="p-4" style={{ height: 'calc(100% - 200px)' }}>
               <h2 className="text-xl font-bold mt-2 text-[16px]">{menuItem.name}</h2>
               <p className="text-gray-600 mt-2 text-[13px]">{menuItem.description}</p>
               <div className="flex justify-between items-center mt-4">

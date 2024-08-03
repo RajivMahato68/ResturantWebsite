@@ -77,9 +77,11 @@ function ContactUs() {
       <div className="w-full bg-white pt-[400px]">
         <div className="h-[50px]"></div>
       </div>
-      <div className="flex flex-col md:flex-row bg-[#fbd8ba] justify-center pt-[50px] pb-10">
+      <div className="flex flex-col md:flex-col lg:flex-row lg:px-10 bg-[#fbd8ba] justify-center pt-[50px] pb-10">
       <ContactInfo />
+      <div className="md:flex md:justify-center md:mt-5">
       <Contact />
+      </div>
       </div>
       <div className="flex">
         <div className="w-full ">

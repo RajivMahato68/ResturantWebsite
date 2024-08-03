@@ -32,7 +32,7 @@ function ChooseUs() {
         Why Choose Us
       </h1>
       
-      <div className='flex flex-col md:flex-row justify-between gap-10'>
+      <div className='flex flex-col md:flex-row justify-between gap-10 cursor-pointer'>
         {items.map((item, index) => (
           <div key={index} className='flex flex-col items-center text-center p-4 md:w-[250px]'>
             <div className='text-[50px] md:text-[100px] text-orange-500 mb-4 gap[200px]'>

@@ -16,6 +16,15 @@ function Card({ menuItems }) {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
@@ -39,14 +48,17 @@ function Card({ menuItems }) {
         {menuItems.map((menuItem, index) => (
           <div
             key={index}
-            className="relative border  rounded-lg shadow-lg shadow-gray-300  overflow-hidden mx-2"
-            style={{ width: '250px', height: '300px' }}
+            className="relative border rounded-lg shadow-lg shadow-gray-300 overflow-hidden mx-2"
+            style={{ width: '100%', maxWidth: '250px', height: '300px' }}
           >
-            <img src={menuItem.image} alt={menuItem.name} className="md:w-[250px] md:h-[300px] h-[300px] w-full object-cover" />
-            <div className="p-4 h-[calc(100%-200px)] bg-[#fef3e9]">
+            <img 
+              src={menuItem.image} 
+              alt={menuItem.name} 
+              className="w-full h-[200px] object-cover" 
+            />
+            <div className="p-4 bg-[#fef3e9] h-[calc(100%-200px)]">
               <h2 className="text-xl font-bold mt-2 text-[20px]">{menuItem.name}</h2>
               <p className="text-gray-600 mt-2 text-[13px]">{menuItem.post}</p>
-              
             </div>
           </div>
         ))}

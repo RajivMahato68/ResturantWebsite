@@ -79,7 +79,7 @@ function HappyHourCards() {
   const [randomCard, setRandomCard] = useState(null);
 
   useEffect(() => {
-    // Select a random card for mobile view
+    // Select a random card for mobile and tablet view
     const index = Math.floor(Math.random() * happyHourData.length);
     setRandomCard(happyHourData[index]);
   }, []);
@@ -87,14 +87,14 @@ function HappyHourCards() {
   return (
     <div className="px-4 py-6">
       {/* Desktop view: show all cards in a grid with 3 cards per row */}
-      <div className="hidden md:grid md:grid-cols-3 md:gap-4">
+      <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4 cursor-pointer">
         {happyHourData.map((data, index) => (
           <HappyHourCard key={index} {...data} />
         ))}
       </div>
       
-      {/* Mobile view: show one random card centered */}
-      <div className="md:hidden  ml-[45px] justify-center h-[250px] w-[242px]">
+      {/* Mobile and Tablet view: show one random card centered */}
+      <div className="lg:hidden flex justify-center items-center h-[250px] w-[242px] mx-auto cursor-pointer">
         {randomCard && <HappyHourCard {...randomCard} />}
       </div>
     </div>

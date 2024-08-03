@@ -36,7 +36,7 @@ function CustomerFav({ menuItems }) {
   };
 
   return (
-    <div className="container mx-auto py-6 mb-5 px-4 md:px-8 lg:px-16 xl:px-24">
+    <div className="container mx-auto py-6 mb-5 px-4 md:px-8 lg:px-16 xl:px-24 cursor-pointer">
       <Slider {...settings}>
         {menuItems.map((menuItem, index) => (
           <div

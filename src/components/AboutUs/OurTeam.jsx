@@ -64,7 +64,7 @@ const allMenuItems = [
 
 function Menu() {
   return (
-    <div className='text-center overflow-hidden'>
+    <div className='text-center overflow-hidden cursor-pointer'>
        <h1
         className='text-center md:text-[36px] text-[35px] mt-[150px] font-bold mb-10 font-["Plus_Jakarta_Sans"] underline-offset-8'
         style={{ textDecoration: 'underline #f38220 2px', textDecorationThickness: '2px', textDecorationOffset: '4px' }}
