@@ -21,7 +21,7 @@ function App() {
       element: <Login />,
     },
     {
-      path: "/register",
+      path: "/sign-up",
       element: <Register />,
     },
     {

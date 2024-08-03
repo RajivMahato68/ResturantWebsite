@@ -49,11 +49,11 @@ function NavBar() {
       <NavDetials />
       <div className="mx-auto flex max-w-7xl h-16 items-center justify-between px-4 py-2  sm:px-6 lg:px-8 ">
         <div className="inline-flex items-center space-x-2 px-8 ml-12">
-          <Link to="/">
+          <Link to="/" className="z-[-10]">
             <img
               src={Logo}
               alt="logo"
-              className="h-[5rem] w-[4rem] object-fit"
+              className="h-[5rem] w-[4rem] object-fit overflow-hidden"
             />
           </Link>
         </div>

@@ -1,12 +1,12 @@
 import React from "react";
 
-function Input({ type, placeholder, register, name, errors }) {
+function Input({ type, placeholder, inputRef, name, errors }) {
   return (
     <>
       <input
         type={type}
         placeholder={placeholder}
-        {...register(name, {
+        {...inputRef(name, {
           required: `${
             name.charAt(0).toUpperCase() + name.slice(1)
           } is required`,
