@@ -1,11 +1,24 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { Button, Layout, Input } from "../../index";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showLoading, hideLoading } from "../../../redux/features/alertSlice";
+import { toast } from "react-toastify";
+import { Eye, EyeOff } from "lucide-react";
 
 function SignUpPage() {
+  // icons click to show and hide password
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  // api hit here
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const {
     register: inputRef,
     handleSubmit,
@@ -15,18 +28,22 @@ function SignUpPage() {
   const onSubmit = async (data) => {
     // data.preventDefault();
     try {
-      const res = await axios.post(
-        "https://restaurantmanagement.amitysoftcs.com/api/login",
-        data
-      );
+      dispatch(showLoading());
+      const res = await axios.post("/api/login", data);
+      dispatch(hideLoading());
+
       if (res.data) {
         console.log("Login  successful:", res.data);
+        toast.success("Login successfull");
         navigate("/");
       } else {
         console.log("Login failed:", res.data);
+        toast.error("Login in Failed");
       }
     } catch (error) {
+      dispatch(hideLoading());
       console.log("Error during login:", error);
+      toast.error("Internal Server error");
     }
   };
 
@@ -59,7 +76,7 @@ function SignUpPage() {
                     >
                       Email
                     </label>
-                    <div className="mt-2">
+                    <div className="mt-2 ">
                       <Input
                         type="email"
                         placeholder="example@gmail.com"
@@ -67,26 +84,34 @@ function SignUpPage() {
                         name="email"
                         errors={errors}
                       />
+
                       {errors.email && (
                         <p className="text-red-500">{errors.email.message}</p>
                       )}
                     </div>
                   </div>
-                  <div>
+                  <div className="">
                     <label
                       htmlFor="password"
                       className="text-base font-medium text-gray-900"
                     >
                       Password
                     </label>
-                    <div className="mt-2">
+                    <div className="mt-2 relative">
                       <Input
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         placeholder="Password"
                         inputRef={inputRef}
                         name="password"
                         errors={errors}
                       />
+                      <button
+                        type="button"
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                        onClick={togglePasswordVisibility}
+                      >
+                        {showPassword ? <EyeOff /> : <Eye />}
+                      </button>
                       {errors.password && (
                         <p className="text-red-500">
                           {errors.password.message}

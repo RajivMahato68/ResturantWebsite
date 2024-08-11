@@ -1,8 +1,17 @@
-import React from "react";
-import { About, Contact, Home, Login, Menu, Register } from "./pages/pages";
+import {
+  About,
+  Contact,
+  Home,
+  Login,
+  Menu,
+  Register,
+  Loader,
+} from "./pages/pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function App() {
+  const { loading } = useSelector((state) => state.alerts);
   const router = createBrowserRouter([
     {
       path: "/",
@@ -30,7 +39,7 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return <>{loading ? <Loader /> : <RouterProvider router={router} />}</>;
 }
 
 export default App;

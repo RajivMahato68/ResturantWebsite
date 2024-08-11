@@ -1,11 +1,25 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Layout, Input } from "../../index";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showLoading, hideLoading } from "../../../redux/features/alertSlice";
+import { toast } from "react-toastify";
+import { Eye, EyeOff } from "lucide-react";
 
 function SignUpPage() {
+  // for icon click to show and hide password
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  //api hit start here
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const {
     register: inputRef,
     handleSubmit,
@@ -15,18 +29,22 @@ function SignUpPage() {
   const onSubmit = async (data) => {
     // data.preventDefault();
     try {
-      const res = await axios.post(
-        "https://restaurantmanagement.amitysoftcs.com/api/register",
-        data
-      );
+      // console.log("test");
+      dispatch(showLoading());
+      const res = await axios.post("/api/register", data);
+      dispatch(hideLoading());
       if (res.data) {
         console.log("Registration successful:", res.data);
+        toast.success("Registration successful");
         navigate("/login");
       } else {
         console.log("Registration failed:", res.data);
+        toast.error("Registration Failed");
       }
     } catch (error) {
+      dispatch(hideLoading());
       console.log("Error during registration:", error);
+      toast.error("Registration Failed");
     }
   };
 
@@ -99,14 +117,21 @@ function SignUpPage() {
                     >
                       Password
                     </label>
-                    <div className="mt-2">
+                    <div className="mt-2 relative">
                       <Input
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         placeholder="Password"
                         inputRef={inputRef}
                         name="password"
                         errors={errors}
                       />
+                      <button
+                        type="button"
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                        onClick={togglePasswordVisibility}
+                      >
+                        {showPassword ? <EyeOff /> : <Eye />}
+                      </button>
                       {errors.password && (
                         <p className="text-red-500">
                           {errors.password.message}
@@ -121,14 +146,21 @@ function SignUpPage() {
                     >
                       Confirm Password
                     </label>
-                    <div className="mt-2">
+                    <div className="mt-2 relative">
                       <Input
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         placeholder="Confirm Password"
                         inputRef={inputRef}
                         name="password_confirmation"
                         errors={errors}
                       />
+                      <button
+                        type="button"
+                        className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                        onClick={togglePasswordVisibility}
+                      >
+                        {showPassword ? <EyeOff /> : <Eye />}
+                      </button>
                       {errors.password && (
                         <p className="text-red-500">
                           {errors.password.message}
