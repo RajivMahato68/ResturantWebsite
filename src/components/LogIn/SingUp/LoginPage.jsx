@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Button, Layout, Input } from "../../index";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import { API } from "../../../providers/request";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../../../redux/features/alertSlice";
@@ -29,7 +29,7 @@ function SignUpPage() {
     // data.preventDefault();
     try {
       dispatch(showLoading());
-      const res = await axios.post("/api/login", data);
+      const res = await API.post("/api/login", data);
       dispatch(hideLoading());
 
       if (res.data) {
