@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import { Button, Layout, Input } from "../../index";
 import { Link } from "react-router-dom";
@@ -106,6 +105,28 @@ function SignUpPage() {
                         placeholder="Password"
                         inputRef={inputRef}
                         name="password"
+                        errors={errors}
+                      />
+                      {errors.password && (
+                        <p className="text-red-500">
+                          {errors.password.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="confirm-password"
+                      className="text-base font-medium text-gray-900"
+                    >
+                      Confirm Password
+                    </label>
+                    <div className="mt-2">
+                      <Input
+                        type="password"
+                        placeholder="Confirm Password"
+                        inputRef={inputRef}
+                        name="password_confirmation"
                         errors={errors}
                       />
                       {errors.password && (
